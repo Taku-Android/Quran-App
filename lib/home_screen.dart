@@ -37,6 +37,12 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: const ImageIcon(
+                  AssetImage('assets/images/quran.png'),
+                ),
+                label: 'Quran'),
+            BottomNavigationBarItem(
+                backgroundColor: Theme.of(context).primaryColor,
+                icon: const ImageIcon(
                   AssetImage('assets/images/radio.png'),
                 ),
                 label: 'Radio'),
@@ -52,12 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   AssetImage('assets/images/ahadeth.png'),
                 ),
                 label: 'Hadeth'),
-            BottomNavigationBarItem(
-                backgroundColor: Theme.of(context).primaryColor,
-                icon: const ImageIcon(
-                  AssetImage('assets/images/quran.png'),
-                ),
-                label: 'Quran'),
+
           ],
         ),
 
@@ -68,5 +69,5 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  List<Widget> tabs = [QuranTab() , RadioTab(), SebhaTab() , HadethTab()  ] ;
+  List<Widget> tabs = [ QuranTab()  , RadioTab() , SebhaTab() , HadethTab()  ] ;
 }
