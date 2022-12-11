@@ -21,7 +21,8 @@ class MyTheme{
       ) ,
       iconTheme: IconThemeData(
         color: Colors.black
-      )
+      ) ,
+
 
     ) ,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -42,7 +43,16 @@ class MyTheme{
      selectedItemColor: Colors.black ,
      // unselectedLabelStyle:  ,
      // unselectedItemColor:
+    ) ,
+   /*
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+          primary: Colors.transparent
+      ) ,
+
     )
+    */
+
   ) ;
 
   static final ThemeData darktheme = ThemeData(
