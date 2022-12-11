@@ -10,7 +10,7 @@ class SuraTitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return InkWell( // to make the text have onTap fun
       onTap: () {
         Navigator.pushNamed(context, SuraDetailScreen.routeName,
             arguments: SuraDetailScreenArgs(title, index));
