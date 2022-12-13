@@ -17,11 +17,11 @@ class HadethtitleWidget extends StatelessWidget {
             arguments: hadeth );
       },
       child: Container(
+        alignment: Alignment.center,
         padding: EdgeInsets.all(5),
         child: Text(
           hadeth.title,
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.headline5
         ),
       ),
     );
