@@ -17,10 +17,10 @@ class SuraTitleWidget extends StatelessWidget {
       },
       child: Container(
         padding: EdgeInsets.all(5),
+        alignment: Alignment.center,
         child: Text(
           title,
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.headline5,
         ),
       ),
     );

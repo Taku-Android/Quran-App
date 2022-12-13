@@ -51,7 +51,7 @@ class _HadethTabState extends State<HadethTab> {
                 return Container(
                   margin: EdgeInsets.symmetric(horizontal: 40),
                   height: 1,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).accentColor,
                   width: double.infinity,
                 );
               }, itemCount: allHadethList.length ,),

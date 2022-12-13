@@ -22,34 +22,29 @@ class RadioTab extends StatelessWidget {
                 Expanded(
                   child: Container(
                     margin: EdgeInsets.symmetric(horizontal: 10),
+
                     child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            elevation: 0.0, backgroundColor: Colors.red.withOpacity(0)),
                         onPressed: () {},
                         child: Icon(Icons.keyboard_arrow_left,
-                            size: 30, color: Theme.of(context).primaryColor)),
+                            size: 30,color: Theme.of(context).iconTheme.color)),
                   ),
                 ),
                 Expanded(
                   child: Container(
                     margin: EdgeInsets.symmetric(horizontal: 10),
                     child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            elevation: 0.0, backgroundColor: Colors.red.withOpacity(0)),
                         onPressed: () {},
                         child: Icon(Icons.arrow_right,
-                            size: 60, color: Theme.of(context).primaryColor)),
+                            size: 60,color: Theme.of(context).iconTheme.color)),
                   ),
                 ),
                 Expanded(
                   child: Container(
                     margin: EdgeInsets.symmetric(horizontal: 10),
                     child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            elevation: 0.0, backgroundColor: Colors.red.withOpacity(0)),
                         onPressed: () {},
                         child: Icon(Icons.keyboard_arrow_right,
-                            size: 30, color: Theme.of(context).primaryColor)),
+                            size: 30 , color: Theme.of(context).iconTheme.color,)),
                   ),
                 )
               ],

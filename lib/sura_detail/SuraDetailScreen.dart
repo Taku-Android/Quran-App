@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/sura_detail/sura_detail_args.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/settings_provider.dart';
+
 
 class SuraDetailScreen extends StatefulWidget {
   static const String routeName = 'SuraDetail';
@@ -25,10 +29,12 @@ class _SuraDetailScreenState extends State<SuraDetailScreen> {
       readFile(args.index + 1);
     }
 
+    var settingsProvider = Provider.of<SettingsProvider>(context);
+
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/default_bg.png'),
+              image: AssetImage(settingsProvider.getMainBackGroungImage()),
               fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
@@ -51,16 +57,18 @@ class _SuraDetailScreenState extends State<SuraDetailScreen> {
             alignment: Alignment.center,
             margin: EdgeInsets.only(top: 10),
 
-            child: Text(verses[index] + '($sora)' , textDirection: TextDirection.rtl , textAlign: TextAlign.center, style: TextStyle(
-              fontSize: 24
-            ),),
+            child: Text(verses[index] + '($sora)' ,
+              textDirection: TextDirection.rtl ,
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.headline5 ,
+            ),
           );
 
         } ,
         itemCount: verses.length ,
                 separatorBuilder: (_ ,__){
                   return Container(
-                      color: Theme.of(context).primaryColor,
+                      color: Theme.of(context).accentColor,
                       height: 1,
                       width: double.infinity,
                     margin: EdgeInsets.symmetric(horizontal: 64),
