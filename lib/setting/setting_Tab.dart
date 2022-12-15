@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/setting/Lang_bottom_sheet.dart';
 import 'package:islami_app/setting/theme_bottom_sheet.dart';
 
 class SettingTab extends StatefulWidget {
@@ -42,19 +43,22 @@ class _SettingTabState extends State<SettingTab> {
             Text('Language' ,
               style: Theme.of(context).textTheme.subtitle1,
             ),
-            Container(
-              margin: EdgeInsets.only(top: 5),
-              width: double.infinity,
-              padding: EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10) ,
-                  border: Border.all(color:
-                  Theme.of(context).accentColor ,
-                      width: 1
-                  )
+            InkWell(
+              onTap: showLangBottomSheet,
+              child: Container(
+                margin: EdgeInsets.only(top: 5),
+                width: double.infinity,
+                padding: EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10) ,
+                    border: Border.all(color:
+                    Theme.of(context).accentColor ,
+                        width: 1
+                    )
+                ),
+                child: Text('English' ,
+                  style: Theme.of(context).textTheme.headline5,),
               ),
-              child: Text('English' ,
-                style: Theme.of(context).textTheme.headline5,),
             ),
 
           ]
@@ -68,6 +72,15 @@ class _SettingTabState extends State<SettingTab> {
         builder: (buildContext){
 
           return ThemeBottomSheet() ;
+
+        } );
+  }
+  void showLangBottomSheet(){
+
+    showModalBottomSheet(context: context ,
+        builder: (buildContext){
+
+          return LangBottomSheet() ;
 
         } );
   }
