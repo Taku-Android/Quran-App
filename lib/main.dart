@@ -6,7 +6,8 @@ import 'package:islami_app/providers/settings_provider.dart';
 import 'package:islami_app/setting/setting_Tab.dart';
 import 'package:islami_app/sura_detail/SuraDetailScreen.dart';
 import 'package:provider/provider.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
@@ -27,6 +28,15 @@ class MyApp extends StatelessWidget{
       theme: MyTheme.lightTheme ,
       darkTheme: MyTheme.darkTheme ,
       themeMode: settingsProvider.currentTheme,
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: AppLocalizations.supportedLocales,
+      //if u wnat to make it one lang
+      locale: Locale(settingsProvider.currentLang),
 
       routes: {
 

@@ -6,6 +6,7 @@ import 'package:islami_app/Sebha/sebha_tab.dart';
 import 'package:islami_app/providers/settings_provider.dart';
 import 'package:islami_app/setting/setting_Tab.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'home';
@@ -31,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
               fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Islami'),
+          title: Text(AppLocalizations.of(context)!.app_title),
         ),
         bottomNavigationBar: BottomNavigationBar(
           onTap: (newlySelected){
@@ -47,30 +48,30 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: const ImageIcon(
                   AssetImage('assets/images/quran.png'),
                 ),
-                label: 'Quran'),
+                label: AppLocalizations.of(context)!.quran),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: const ImageIcon(
                   AssetImage('assets/images/radio.png'),
                 ),
-                label: 'Radio'),
+                label: AppLocalizations.of(context)!.radio),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: const ImageIcon(
                   AssetImage('assets/images/sebha.png'),
                 ),
-                label: 'Tasbeh'),
+                label: AppLocalizations.of(context)!.mention),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: const ImageIcon(
                   AssetImage('assets/images/ahadeth.png'),
                 ),
-                label: 'Hadeth'),
+                label: AppLocalizations.of(context)!.hadeth),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: const Icon(Icons.settings)
                 ,
-                label: 'settings'),
+                label: AppLocalizations.of(context)!.settings),
 
           ],
         ),
